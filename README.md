@@ -1,3 +1,5 @@
+[https://morganmlgman.github.io/MonochromaticLedController/](https://morganmlgman.github.io/MonochromaticLedController/)
+
 # ESPHome Project Template
 
 This repo serves as a template for creating a new ESPHome project.
