@@ -1,0 +1,10 @@
+packages:
+  core: !include monochromaticLedController.yaml
+
+esphome:
+  project:
+    name: MorganMLGman.MonochromaticLedController
+    version: dev
+
+dashboard_import:
+  package_import_url: github://MorganMLGman/MonochromaticLedController/monochromaticLedController.yaml@main

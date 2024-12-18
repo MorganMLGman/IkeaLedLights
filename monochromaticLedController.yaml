@@ -1,0 +1,43 @@
+substitutions: 
+  ap_password: "123456789"
+  ota_password: "123456789"
+
+esphome:
+  name: monoledcontroller
+  friendly_name: Monochromatic Led Controller
+  name_add_mac_suffix: True
+  project:
+    name: MorganMLGman.MonochromaticLedController
+    version: 1.0.0
+
+esp8266:
+  board: esp01_1m
+  restore_from_flash: true
+  early_pin_init: false
+  framework:
+    version: recommended
+
+packages: 
+  esp01_1m_remote:
+    url: https://github.com/MorganMLGman/ESPHomeBaseFiles
+    files:
+      - ESP8266/esp01_1m.yaml
+    ref: master
+    refresh: 1d
+
+output:
+  - platform: esp8266_pwm
+    pin: GPIO0
+    frequency: 1000 Hz
+    id: pwm_output
+
+light:
+  - platform: monochromatic
+    name: LED Chain
+    output: pwm_output
+    restore_mode: RESTORE_DEFAULT_OFF 
+
+ota:
+  - platform: esphome
+    id: ota_esphome
+    password: ${ota_password}
