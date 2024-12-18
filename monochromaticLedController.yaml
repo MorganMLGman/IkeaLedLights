@@ -57,7 +57,12 @@ binary_sensor:
     filters:
       - delayed_on_off: 20ms
     on_click:
-      min_length: 50ms
-      max_length: 350ms
-      then: 
-        - light.toggle: led_chain
+      - min_length: 50ms
+        max_length: 500ms
+        then: 
+          - light.toggle: led_chain
+
+      - min_length: 10s
+        max_length: 30s
+        then: 
+          - button.press: factory_reset_button
