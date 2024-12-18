@@ -33,7 +33,7 @@ ota:
 output:
   - platform: esp8266_pwm
     pin: 
-      number: GPIO0
+      number: GPIO3
       inverted: true
     frequency: 1000 Hz
     id: pwm_output
@@ -48,7 +48,7 @@ light:
 binary_sensor:
   - platform: gpio
     pin:
-      number: GPIO2
+      number: GPIO0
       inverted: true
       mode:
         input: true
