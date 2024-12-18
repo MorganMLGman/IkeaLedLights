@@ -25,6 +25,11 @@ packages:
     ref: master
     refresh: 1d
 
+ota:
+  - platform: esphome
+    id: ota_esphome
+    password: ${ota_password}
+
 output:
   - platform: esp8266_pwm
     pin: 
@@ -39,7 +44,12 @@ light:
     output: pwm_output
     restore_mode: RESTORE_DEFAULT_OFF 
 
-ota:
-  - platform: esphome
-    id: ota_esphome
-    password: ${ota_password}
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO2
+      inverted: true
+      mode:
+        input: true
+        pullup: true
+    name: Button
