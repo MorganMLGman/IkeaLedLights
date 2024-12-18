@@ -41,6 +41,7 @@ output:
 light:
   - platform: monochromatic
     name: LED Chain
+    id: led_chain
     output: pwm_output
     restore_mode: RESTORE_DEFAULT_OFF 
 
@@ -53,3 +54,10 @@ binary_sensor:
         input: true
         pullup: true
     name: Button
+    filters:
+      - delayed_on_off: 20ms
+    on_click:
+      min_length: 50ms
+      max_length: 350ms
+      then: 
+        - light.toggle: led_chain
