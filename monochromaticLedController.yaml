@@ -46,6 +46,14 @@ light:
     id: led_chain
     output: pwm_output
     restore_mode: RESTORE_DEFAULT_OFF 
+    effects:
+      - pulse:
+      - pulse:
+          name: "Fast Pulse"
+          transition_length: 0.5s
+          update_interval: 0.5s
+          min_brightness: 0%
+          max_brightness: 100%
 
 binary_sensor:
   - platform: gpio
