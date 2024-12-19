@@ -37,6 +37,8 @@ output:
       inverted: true
     frequency: 1000 Hz
     id: pwm_output
+    min_power: 0.25
+    zero_means_zero: true
 
 light:
   - platform: monochromatic
