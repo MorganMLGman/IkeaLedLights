@@ -49,6 +49,12 @@ light:
     effects:
       - pulse:
       - pulse:
+          name: "Slow Pulse"
+          transition_length:
+            on_length: 1.8s
+            off_length: 0.2s
+          update_interval: 2s
+      - pulse:
           name: Fast Pulse
           transition_length: 0.5s
           update_interval: 0.5s
