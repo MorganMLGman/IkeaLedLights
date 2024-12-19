@@ -49,11 +49,15 @@ light:
     effects:
       - pulse:
       - pulse:
-          name: "Fast Pulse"
+          name: Fast Pulse
           transition_length: 0.5s
           update_interval: 0.5s
           min_brightness: 0%
           max_brightness: 100%
+      - random:
+          name: Random
+          transition_length: 0.2s
+          update_interval: 0.5s
 
 binary_sensor:
   - platform: gpio
