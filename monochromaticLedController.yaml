@@ -56,8 +56,8 @@ light:
           max_brightness: 100%
       - random:
           name: Random
-          transition_length: 0.2s
-          update_interval: 0.5s
+          transition_length: 0.25s
+          update_interval: 0.25s
 
 binary_sensor:
   - platform: gpio
