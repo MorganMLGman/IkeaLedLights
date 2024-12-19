@@ -51,9 +51,9 @@ light:
       - pulse:
           name: "Slow Pulse"
           transition_length:
-            on_length: 1.8s
+            on_length: 4.8s
             off_length: 0.2s
-          update_interval: 2s
+          update_interval: 5s
       - pulse:
           name: Fast Pulse
           transition_length: 0.5s
